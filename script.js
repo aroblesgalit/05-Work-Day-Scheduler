@@ -23,33 +23,50 @@ $(document).ready(function () {
     if (currentTime > 0 && currentTime < 9) {
         allBlocks.addClass("future");
     } else if (currentTime >= 9 && currentTime < 10) {
+        allBlocks.addClass("future");
         blockNine.removeClass("future").addClass("present");
     } else if (currentTime >= 10 && currentTime < 11) {
-        blockNine.removeClass("present").addClass("past");
+        allBlocks.addClass("future");
         blockTen.removeClass("future").addClass("present");
+        blockNine.removeClass("future").addClass("past");
     } else if (currentTime >= 11 && currentTime < 12) {
-        blockTen.removeClass("present").addClass("past");
+        allBlocks.addClass("future");
         blockEleven.removeClass("future").addClass("present");
+        blockNine.removeClass("future").addClass("past");
+        blockTen.removeClass("future").addClass("past");
     } else if (currentTime >= 12 && currentTime < 13) {
-        blockEleven.removeClass("present").addClass("past");
+        allBlocks.addClass("future");
         blockTwelve.removeClass("future").addClass("present");
+        blockNine.removeClass("future").addClass("past");
+        blockTen.removeClass("future").addClass("past");
+        blockEleven.removeClass("future").addClass("past");
     } else if (currentTime >= 13 && currentTime < 14) {
-        blockTwelve.removeClass("present").addClass("past");
+        allBlocks.addClass("future");
         blockOne.removeClass("future").addClass("present");
+        blockNine.removeClass("future").addClass("past");
+        blockTen.removeClass("future").addClass("past");
+        blockEleven.removeClass("future").addClass("past");        
+        blockTwelve.removeClass("future").addClass("past");
     } else if (currentTime >= 14 && currentTime < 15) {
-        blockOne.removeClass("present").addClass("past");
-        blockTwo.removeClass("future").addClass("present");
+        allBlocks.addClass("past");
+        blockTwo.removeClass("past").addClass("present");
+        blockThree.removeClass("past").addClass("future");
+        blockFour.removeClass("past").addClass("future");
+        blockFive.removeClass("past").addClass("future");        
     } else if (currentTime >= 15 && currentTime < 16) {
-        blockTwo.removeClass("present").addClass("past");
-        blockThree.removeClass("future").addClass("present");
+        allBlocks.addClass("past");
+        blockThree.removeClass("past").addClass("present");
+        blockFour.removeClass("past").addClass("future");
+        blockFive.removeClass("past").addClass("future");
     } else if (currentTime >= 16 && currentTime < 17) {
-        blockThree.removeClass("present").addClass("past");
-        blockFour.removeClass("future").addClass("present");
+        allBlocks.addClass("past");
+        blockFour.removeClass("past").addClass("present");
+        blockFive.removeClass("past").addClass("future");
     } else if (currentTime >= 17 && currentTime < 18) {
-        blockFour.removeClass("present").addClass("past");
-        blockFive.removeClass("future").addClass("present");
+        allBlocks.addClass("past");
+        blockFive.removeClass("past").addClass("present");
     } else if (currentTime >= 18) {
-        blockFive.removeClass("present").addClass("past");
+        allBlocks.addClass("past");
     }
 
 
