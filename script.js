@@ -8,7 +8,7 @@ $(document).ready(function () {
 
    
     // Target each time block where the textarea is
-    var currentTime = moment().format("HH");
+    var currentTime = parseInt(moment().format("HH"));
     var allBlocks = $(".rowBlock");
     var blockNine = $("[data-time='nine']");
     var blockTen = $("[data-time='ten']");
@@ -20,7 +20,9 @@ $(document).ready(function () {
     var blockFour = $("[data-time='four']");
     var blockFive = $("[data-time='five']");
     // Base on the time, remove and add classes for color code
-    if (currentTime >= 9 && currentTime < 10) {
+    if (currentTime > 0 && currentTime < 9) {
+        allBlocks.addClass("future");
+    } else if (currentTime >= 9 && currentTime < 10) {
         blockNine.removeClass("future").addClass("present");
     } else if (currentTime >= 10 && currentTime < 11) {
         blockNine.removeClass("present").addClass("past");
@@ -48,10 +50,6 @@ $(document).ready(function () {
         blockFive.removeClass("future").addClass("present");
     } else if (currentTime >= 18) {
         blockFive.removeClass("present").addClass("past");
-    } else if (currentTime > 0 && currentTime < 9) {
-        allBlocks.addClass("future");
-    } else if (currentTime < 24) {
-        allBlocks.addClass("past").removeClass("future");
     }
 
 
