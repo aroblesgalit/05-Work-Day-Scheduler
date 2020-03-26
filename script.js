@@ -60,6 +60,34 @@ $(document).ready(function () {
     // THEN I can enter an event
     // WHEN I click the save button for that timeblock
     // THEN the text for that event is saved in local storage
+    var saveBtn = $(".saveBtn");
+    saveBtn.on("click", storeTasks);
+
+    function storeTasks() {
+        var selectedBlock = $(this).prev("div");
+        var timeBlock = selectedBlock.data("time");
+        var textAreaValue = selectedBlock.find("textarea").val();
+        if (timeBlock == "nine") {
+            localStorage.setItem("blockNine", textAreaValue);
+        } else if (timeBlock == "ten") {
+            localStorage.setItem("blockTen", textAreaValue);
+        } else if (timeBlock == "eleven") {
+            localStorage.setItem("blockEleven", textAreaValue);
+        } else if (timeBlock == "twelve") {
+            localStorage.setItem("blockTwelve", textAreaValue);
+        } else if (timeBlock == "one") {
+            localStorage.setItem("blockOne", textAreaValue);
+        } else if (timeBlock == "two") {
+            localStorage.setItem("blockTwo", textAreaValue);
+        } else if (timeBlock == "three") {
+            localStorage.setItem("blockThree", textAreaValue);
+        } else if (timeBlock == "four") {
+            localStorage.setItem("blockFour", textAreaValue);
+        } else if (timeBlock == "five") {
+            localStorage.setItem("blockFive", textAreaValue);
+        }
+    }
+
     // WHEN I refresh the page
     // THEN the saved events persist   
 
