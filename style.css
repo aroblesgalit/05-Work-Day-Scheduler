@@ -13,10 +13,10 @@ body {
 .jumbotron {
   text-align: center;
   background-color: goldenrod;
-  color: black;
+  color: #222;
   border-radius: 0;
-  border-bottom: 10px solid black;
-  padding: 40px 20px;
+  border-bottom: 10px solid #222;
+  padding: 40px 20px 20px 20px;
   font-size: 42px;
 }
 
@@ -24,11 +24,19 @@ textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
+  color: #222;
   /* border-left: 1px solid black; */
   padding: 10px;
   height: 100%;
   width: 100%;
+}
+
+textarea:focus {
+ background-color: rgb(0, 0, 0, 0.1);
+}
+
+.rowBlock {
+  line-height: 1.5;
 }
 
 .description{
@@ -47,12 +55,15 @@ textarea {
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  background-color: goldenrod;
+  color: #222;
   display: flex;
   align-items: center;
+  justify-content: center;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   z-index: 2;
+  border-right: 1px solid white;
 }
 
 .past {
@@ -71,16 +82,20 @@ textarea {
 }
 
 .saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: none;
+  border-left: 1px solid white;
   background-color: #06AED5;
   color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
+.saveBtn:hover {
+  font-size: 28px;
+  transition: all .2s ease-in-out;
 }
 
 .col-9 {
