@@ -38,3 +38,4 @@ THEN the saved events persist
 [Work Day Scheduler](https://aroblesgalit.github.io/05-Work-Day-Scheduler/)
 
 ## Screenshots
+![Work Day Scheduler Screenshot]()
