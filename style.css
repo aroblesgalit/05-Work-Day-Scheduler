@@ -90,3 +90,9 @@ textarea {
 .container {
   margin-bottom: 60px;
 }
+
+#currentDay {
+  font-weight: bold;
+  font-size: 24px;
+  color: #f5f5f5;
+}
