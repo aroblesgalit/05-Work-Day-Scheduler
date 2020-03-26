@@ -88,8 +88,33 @@ $(document).ready(function () {
         }
     }
 
+    init();
+
+    function init() {
+        renderTasks();
+    }
+
     // WHEN I refresh the page
     // THEN the saved events persist   
-
+    function renderTasks() {
+        var blockNineValue = localStorage.getItem("blockNine");
+        blockNine.find("textarea").val(blockNineValue);
+        var blockTenValue = localStorage.getItem("blockTen");
+        blockTen.find("textarea").val(blockTenValue);
+        var blockElevenValue = localStorage.getItem("blockEleven");
+        blockEleven.find("textarea").val(blockElevenValue);
+        var blockTwelveValue = localStorage.getItem("blockTwelve");
+        blockTwelve.find("textarea").val(blockTwelveValue);
+        var blockOneValue = localStorage.getItem("blockOne");
+        blockOne.find("textarea").val(blockOneValue);
+        var blockTwoValue = localStorage.getItem("blockTwo");
+        blockTwo.find("textarea").val(blockTwoValue);
+        var blockThreeValue = localStorage.getItem("blockThree");
+        blockThree.find("textarea").val(blockThreeValue);
+        var blockFourValue = localStorage.getItem("blockFour");
+        blockFour.find("textarea").val(blockFourValue);
+        var blockFiveValue = localStorage.getItem("blockFive");
+        blockFive.find("textarea").val(blockFiveValue);
+    }
 
 })
