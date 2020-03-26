@@ -31,7 +31,7 @@ textarea {
   resize: none;
   color: #222;
   /* border-left: 1px solid black; */
-  padding: 10px;
+  padding: 10px 20px;
   height: 100%;
   width: 100%;
 }
@@ -42,6 +42,7 @@ textarea:focus {
 
 .rowBlock {
   line-height: 1.5;
+  padding: 0;
 }
 
 .description{
@@ -147,5 +148,9 @@ textarea:focus {
 
   .time-block {
     margin: 0;
+  }
+
+  textarea {
+    padding: 10px;
   }
 }
