@@ -20,7 +20,7 @@ $(document).ready(function () {
     var blockFour = $("[data-time='four']");
     var blockFive = $("[data-time='five']");
     // Base on the time, remove and add classes for color code
-    if (currentTime > 0 && currentTime < 9) {
+    if (currentTime >= 0 && currentTime < 9) {
         allBlocks.addClass("future");
     } else if (currentTime >= 9 && currentTime < 10) {
         allBlocks.addClass("future");
